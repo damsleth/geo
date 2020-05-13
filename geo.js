@@ -2,7 +2,7 @@
     window.addEventListener('load', function () {
         log("window loaded")
         window["state"] = new State()
-        getLocationHard()
+        getLocation()
     })
 })()
 
@@ -22,13 +22,13 @@ const getState = () => window['state']
 // allows us to selectively update state
 function setState(state) { Object.keys(state).forEach(k => { window['state'][k] = state[k] }) }
 
-// logs text on same line
+// logs text in intervals
 function startStopTiming(txt = '.', ms = 500) {
     let state = getState()
     state.intervalId ? state.intervalId = clearInterval(state.intervalId) : state.intervalId = setInterval(() => log(txt, false), ms)
 }
 
-function getLocationHard() {
+function getLocation() {
     let opts = {
         enableHighAccuracy: true,
         timeout: 10000,
@@ -61,5 +61,3 @@ function log(txt = '<br/>', newline = true) {
 }
 
 function round(n) { return Math.round(n * 10000) / 10000 }
-
-function rand() { return Math.floor(Math.random() * 1000) }
