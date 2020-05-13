@@ -1,0 +1,81 @@
+html,
+body {
+    font-family: "Fira code","Hack","Helvetica", "sans-serif";
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #444;
+    margin: 0;
+    background: rgba(238, 234, 231, 0.2);
+}
+
+h1 {
+    color: #41c4dd;
+    text-shadow: .2rem .5rem 1rem rgba(0, 0, 0, .1);
+    font-family: Fira Code,Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+#header {
+    height: 2rem;
+}
+
+#container {
+    width: 100%;
+    max-width: 1400px;
+    height: calc(100% - 15rem);
+    display: flex;
+    background:transparent
+}
+
+#content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    border: 1px solid #f0f0f0;
+    border-bottom: 0px;
+    background:#fff;
+    box-shadow: .2rem .8rem 1.5rem #4b52530c;
+    border-radius: 3px;
+    height: 100%;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+#location {
+    margin-bottom: auto;
+    flex-grow: 1;
+    display: flex;
+}
+
+#log {
+    display: none;
+    margin-top: auto;
+    flex-direction: column;
+    background-color: #69c1d36c;
+    padding: 1rem 2rem;
+    margin: -2rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #aaf1ff63;
+    height: 150px;
+    overflow: hidden;
+}
+#logtext{
+    position: relative;
+    overflow-y: scroll;
+    margin-top: auto;
+    scroll-behavior: smooth;
+    line-height: 1;
+    color:#000;
+    transition: all .5s ease-in-out;
+}
+::-webkit-scrollbar {
+    width:2px;
+}
+
+@media(min-height: 500px){
+    #log{display:flex;}
+}
