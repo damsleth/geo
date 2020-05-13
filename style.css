@@ -1,6 +1,6 @@
 html,
 body {
-    font-family: "Fira code","Hack","Helvetica", "sans-serif";
+    font-family: "Fira code","Hack","Menlo","Helvetica", "sans-serif";
     height: 100%;
     width: 100%;
     display: flex;
